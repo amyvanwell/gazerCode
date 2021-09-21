@@ -36,21 +36,21 @@ The main softwares used in the Gazer program are
 
 ## Philosophy
   
-The Gazer system is comprised of 4 phases:
+The Gazer system of experimentation is comprised of 4 phases.
   
-  1. Calibration
+  - Calibration
   
   Participants calibrate the eye tracking system using a point-and-click method. The calibration must meet a accuracy threshold (default to 70%) in order to proceed to further trials. The calibration plug-in should be included many times in a Gazer experiment in order to maintain the accuracy of the eye tracking system. 
   
-  2. Validation
+  - Validation
   
   A simple exogeneous attention task is included in order to "take a look into" the Gazer code. A potential limitation with online experimentation is that the experimenter is not in the room to confirm proper participation. Gazer includes a fixation task with a known output, provided proper calibration and participation. This task should be included in any Gazer experiment so that the researcher may look at the data output and validate the participant's data. If the data does not follow the known pattern, this could be an indication of improper calibration or just improper participation (i.e., participant is not following the provided task). 
   
-  3. Collection
+  - Collection
   
   There are currently plug-ins for five different types of trials. In the data collection phase, the experimenter defines blocks of trials with their own inputs in order to follow their own custom experiment design.
   
-  4. Analysis
+  - Analysis
   
   After performing sufficient data collection and validation, Python-based analysis functions can be used to evaluate fixations and saccades from the Gazer data.
   
@@ -85,10 +85,16 @@ Currently, the only "active vision" plugin. Two images are shown, separated by a
 ## How to Start
 
 ### Downloading
+  
+Full instructions for downloading the Gazer system including a demo experiment can be found on the Github repo [here](https://github.com/amyvanwell/gazerCode).
 
 ### Editing
+  
+After downloading and install the system, make sure you follow the instructions in the repo's README for how to build and save edits to the src tree. To actually edit your experiment, make changes in the experiment.js file of the src tree. Consult the jsPsych [website](https://www.jspsych.org/) for how to use the framework. 
 
 ### Making new plugins
+  
+There may be the case that you have a designed an experiment with trials that does not correspond to any of the existing plug-ins. I reccommend using the plug-in Single-Image-Duration as a beginning point to edit and develop a new plug-in as it has the least amount of code. If the trial you want to have is sufficiently sophisticated, you may contact the original author Amy vanWell (amyvanwell@uvic.ca) and request either assistance or for the author to write the plug-in.
 
 ## Data
   
@@ -99,3 +105,8 @@ Currently, the only "active vision" plugin. Two images are shown, separated by a
 ### Example
 
 ## Published Research
+  
+ Gazer is currently being used to conduct online experiments set to be published in 2022. A pilot version of the study including a pilot experiment were presented at V-VSS 2021 and will also be presented at OPAM in November 2021.
+
+  vanWell, A., Liu, X., Martin, J., & Tanaka, J.W. (2021, May 23) Investigating the time course of face perception using web-based eye tracking [Poster]. V-VSS, virtual. [Video Walkthrough](https://www.amyvanwell.com/presentations#:~:text=V-VSS%2C%20virtual.-,Video%20Walkthrough,-vanWell%2C%20A.%2C%20Liu)
+  
