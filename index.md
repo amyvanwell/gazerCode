@@ -1,3 +1,7 @@
+* Placeholder for Table of Content (Must not be removed) <newline> {:toc}
+
+  {:toc}
+  
 ## Introduction
 
 #### Author: Amy vanWell, University of Victoria
