@@ -1,6 +1,8 @@
-* Placeholder for Table of Content (Must not be removed) <newline> {:toc}
+* Placeholder for Table of Content (Must not be removed) <newline> 
+{:toc}
 
-  {:toc}
+* TOC
+{:toc}
   
 ## Introduction
 
