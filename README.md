@@ -1,4 +1,8 @@
-# Sample Gazer Experiment
+# Gazer Code and Sample Experiment
+
+# Documentation
+
+For full documentation of Gazer past download and install, please consult the [Gazer Docs](https://amyvanwell.github.io/gazerCode/).
 
 # How To Install
 
