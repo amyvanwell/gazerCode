@@ -1,8 +1,3 @@
-### Table of Contents
-
-* Placeholder for Table of Content (Must not be removed) <newline> 
-{:toc}
-
   
 ## Introduction
 
