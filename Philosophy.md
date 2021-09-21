@@ -1,3 +1,10 @@
+---
+layout: default
+title: Philosophy
+nav_order: 2
+description: "The general philosophy and structure of the Gazer experiments."
+---
+
 ## Philosophy
   
 The Gazer system of experimentation is comprised of 4 phases.
