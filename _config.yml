@@ -44,3 +44,5 @@ aux_links_new_tab: true
 # Supports true (default) or false
 heading_anchors: true
 
+# Add Footer
+footer_content: "Author: Amy vanWell, University of Victoria. Contact: amyvanwell@uvic.ca"
