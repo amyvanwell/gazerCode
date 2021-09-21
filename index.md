@@ -1,4 +1,10 @@
-  
+---
+layout: default
+title: Introduction
+nav_order: 1
+description: "GitHub Pages site for documentation of the Gazer program."
+---
+
 ## Introduction
 
 #### Author: Amy vanWell, University of Victoria
