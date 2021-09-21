@@ -4,6 +4,10 @@
 
 For full documentation of Gazer past download and install, please consult the [Gazer Docs](https://amyvanwell.github.io/gazerCode/).
 
+# Demo
+
+To see the demo working online, see the deployment at the following [link](https://gazer-demo.herokuapp.com/).
+
 # How To Install
 
 1. Branch this repository and download the branch onto your computer.
