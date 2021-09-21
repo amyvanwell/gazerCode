@@ -1,6 +1,6 @@
 #theme: jekyll-theme-minimal
 remote_theme: pmarsceill/just-the-docs
-markdown: kramdown
+#markdown: kramdown
 
 # Enable or disable the site search
 # Supports true (default) or false
