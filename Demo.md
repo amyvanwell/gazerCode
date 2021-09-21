@@ -7,7 +7,7 @@ description: "Link to Gazer demo experiment and description of the example trial
 
 ## Demo
   
-A full demonstration of a Gazer experiment is available at the following [link](https://gazer-demo.herokuapp.com/). Included in the experiment is the calibration plugin, validation plugin, and many trial types.
+The code for Gazer is available at the github [repo](https://gazer-demo.herokuapp.com/). Included in the code is a demo experiment demonstrating the calibration plugin, validation plugin, and all trial types.
   
 ### Trial Types
   
