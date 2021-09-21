@@ -1,3 +1,10 @@
+---
+layout: default
+title: How to Start
+nav_order: 4
+description: "A simple description for how to download Gazer and start editing."
+---
+
 ## How to Start
 
 ### Downloading
