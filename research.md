@@ -1,3 +1,10 @@
+---
+layout: default
+title: Research
+nav_order: 6
+description: "A list of all the research conducted using Gazer."
+---
+
 ## Published Research
   
  Gazer is currently being used to conduct online experiments set to be published in 2022. A pilot version of the study including a pilot experiment were presented at V-VSS 2021 and will also be presented at OPAM in November 2021.
