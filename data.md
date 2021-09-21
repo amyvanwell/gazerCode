@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data
+title: Data and Analysis
 nav_order: 5
 description: "Example of Gazer output and how to analyse."
 ---
@@ -21,7 +21,20 @@ Sample output for part of trial using Gazer:
 | 574           | 731      | 351   |
 | 656           | 939 | 329  |
 
-The output of all trials using Gazer plugins include data in the above format as an array of hash tables. Each element in the array is one of the Gazer points (in chronological order) including values for time, x-coord, and y-coord. For example, a Single-Dot-Duration trial lasting 2000ms will generate an array with approximately 35 points. 
+The output of all trials using Gazer plugins include data with the above information as an array of hash tables. Each element in the array is one of the Gazer points (in chronological order) including values for time, x-coord, and y-coord. For example, a Single-Dot-Duration trial lasting 2000ms will generate an array with approximately 35 points.
+
+The above sample was formatted originally as :
+
+```js
+[ 
+{time: 418, x: 766, y: 341},
+{time: 497, x: 326, y: 326},
+{time: 574, x: 731, y: 351},
+{time: 656, x: 939, y: 329}
+]
+
+
+```
 
 ### Analysis
 
