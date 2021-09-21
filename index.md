@@ -27,11 +27,11 @@ Ideally, Gazer is an open software that will allow vision scientists to skip mos
   
 The main softwares used in the Gazer program are
   
-  1. WebGazer.js
+  - WebGazer.js
   
   The code for WebGazer is available publicly on [Github](https://github.com/brownhci/WebGazer). The software was developed at Brown University and is a     system for eye tracking using personal laptop cameras. User interactions such as clicks are synced with a face mesh on the video feed and used to generate real-time gaze prediction. 
   
-  2. jsPsych
+  - jsPsych
 
   jsPsych is a popular framework for developing online psychology experiments. You can find full documentation on their [website](https://www.jspsych.org/). Although programming knowledge is required to use this system, it is a small barrier in comparison to developing a full eye tracking system.
 
