@@ -11,7 +11,7 @@ A full demonstration of a Gazer experiment is available at the following link. I
   
 ### Trial Types
   
-The name of trials are coded to represent: [Number of stimuli]-Trial-[Response that ends trial]. During all trials, gaze is recorded using WebGazer.js .
+The name of trials are coded to represent: {Number of stimuli}-Trial-{Response that ends trial}. During all trials, gaze is recorded using WebGazer.js .
   
 ##### Single-Trial-Key
   
