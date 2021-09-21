@@ -36,7 +36,7 @@ The above sample was formatted originally as :
 
 ```
 
-### Analysis
+## Analysis
 
 Code is currently being developed for release that will allow easy analysis of Gazer data for fixations and saccades. The analysis will be written in Python.
 
