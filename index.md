@@ -11,11 +11,11 @@ description: "GitHub Pages site for documentation of the Gazer program."
  
 ### Problem
   
-There exist eye tracking systems for personal laptop cameras that have even been used to create publishable research:
+There exist web-based eye tracking systems for personal laptop cameras that have even been used to create publishable research:
   
  Semmelmann, Kilian, and Sarah Weigelt. 2018. “Online Webcam-Based Eye Tracking in Cognitive Science: A First Look.” Behavior Research Methods 50 (2): 451–65.
   
-However, the code used to conduct this research has not been shared. Therefore, in order to use these systems a researcher would need to write code to encorporate them into a web framework and therefore would need to be a skilled web developer. In addition, they would need to conduct many tests of their system in order to confirm the quality and validity of the data. The requirement of knowledge, work and time creates a barrier in conducting online eye tracking research for the typical vision scientist.
+However, the code used to conduct this research has not been shared. In order to use the eye tracking system to conduct an experiment, a researcher would need to encorporate it into a web framework and therefore would need to be a skilled web developer. In addition, they would need to conduct many tests of their system in order to confirm the quality and validity of the data. The requirement of knowledge, work and time creates a barrier in conducting online eye tracking research for the typical vision scientist.
 
 ### Goal
   
