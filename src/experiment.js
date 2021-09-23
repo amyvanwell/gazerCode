@@ -47,7 +47,7 @@ let timeline = [];
 // Add a text plugin as a landing page
 timeline.push({
     type: 'html-keyboard-response',
-    stimulus: "<p>Welcome to the sample Gazer experiment. Press any key to proceed to the Gazer calibration.</p>"
+    stimulus: "<p>Welcome to the sample Gazer experiment. </p><p>The purpose of this demo is to provide example of all the Gazer plugins for jsPsych.</p><p>For documentation of this system, please visit <a href='https://amyvanwell.github.io/gazerCode/'>https://amyvanwell.github.io/gazerCode/</a></p> Press any key to proceed to the first part of the demonstration, the Gazer calibration.</p>"
 });
 
 // Add the event Gazer Calibration Plugin
