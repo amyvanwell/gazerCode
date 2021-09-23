@@ -37,7 +37,7 @@ webgazer.begin(() => {
 //      PRELOAD IMAGES AND INITIATE TIMELINE
 
 // List of imgs to preload
-let images = ["./img/banana.png", "./img/test_faces/female1.jpg", "./img/test_faces/female2.jpg", "./img/test_faces/female3.jpg", "./img/test_faces/female4.jpg", "./img/test_faces/female5.jpg", "./img/test_faces/male1.jpg", "./img/test_faces/male2.jpg", "./img/test_faces/male3.jpg", "./img/test_faces/male4.jpg", , "./img/test_faces/male5.jpg"];
+let images = ["./img/banana.png", "./img/birds/bird1.jpeg", "./img/birds/bird2.jpeg", "./img/birds/bird3.jpeg", "./img/birds/bird4.jpeg", "./img/birds/bird5.jpeg", "./img/birds/bird6.jpeg", "./img/birds/bird7.jpeg", "./img/birds/bird8.jpeg", "./img/birds/bird9.jpeg", "./img/birds/bird10.jpeg"];
 
 // Initiate jsPsych event timeline
 let timeline = [];
@@ -47,7 +47,7 @@ let timeline = [];
 // Add a text plugin as a landing page
 timeline.push({
     type: 'html-keyboard-response',
-    stimulus: "<p>Welcome to the sample Gazer experiment. </p><p>The purpose of this demo is to provide example of all the Gazer plugins for jsPsych.</p><p>For documentation of this system, please visit <a href='https://amyvanwell.github.io/gazerCode/'>https://amyvanwell.github.io/gazerCode/</a></p> Press any key to proceed to the first part of the demonstration, the Gazer calibration.</p>"
+    stimulus: "<p>Welcome to the Gazer demo experiment. </p><p>The purpose of this demo is to provide working examples for all the available Gazer plugins for jsPsych.</p><p>For documentation of this system, please visit <a href='https://amyvanwell.github.io/gazerCode/'>amyvanwell.github.io/gazerCode/</a>.</p> Press any key to proceed to the first part of the demonstration, the Gazer calibration.</p>"
 });
 
 // Add the event Gazer Calibration Plugin
@@ -62,13 +62,13 @@ timeline.push({
     on_finish: () => {
         showVideoShowMouse(false);
     },
-    test: true
+    test: false
 });
 
 // Add a text plugin to indicate the calibration is complete and provide experiment instructions
 timeline.push({
     type: 'html-keyboard-response',
-    stimulus: "<p>Thank you for calibrating, you will now proceed to the trials.</p><p> There are a total of 5 blocks of trials, each of a different type. <br>The first will be a block of 8 SINGLE-DOT-GAZE trials.</p><p>Your task is to fixate on the center cross, and then gaze at the red dot when it appears until the end of the trial.</p><p>In each trial, we will wait to present the red dot until we record your gaze is on the center cross.</p><p> Press [space] to continue to proceed to the first trial.</p>"
+    stimulus: "<p>Thank you for calibrating, you will now proceed to the trials.</p><p> There are a total of 5 blocks of trials, each of a different type. <br>The first will be a block of 8 SINGLE-DOT-DURATION trials.</p><p>Your task is to fixate on the center cross, and then gaze at the red dot when it appears until the end of the trial.</p><p>In each trial, we will wait to present the red dot until we record your gaze has been on the center cross for 250ms consecutively.</p><p> Press [space] to continue to proceed to the first trial.</p>"
 });
 
 //      INITIATE THE OTHER GAZER PLUGINS
@@ -77,7 +77,7 @@ timeline.push({
 // Displays fixation cross on the screen until Gazer detects a minimum gaze duration set in milliseconds
 const singleCrossGaze = {
     type: "Single-Cross-Gaze",
-    duration: 1000
+    duration: 250
 };
 
 // Initiate SINGLE-DOT-DURATION plugin
@@ -141,7 +141,7 @@ const singleImageKey = {
 // Use singleDotDurationBlock to confirm the participant's calibration and participation as a part of Gazer's "validation" technique
 // This block is saved to a variable so it may be added to the timeline multiple times more easily
 const singleDotDurationBlock = {
-    timeline: [singleDotDurationTrial],
+    timeline: [singleCrossGaze, singleDotDurationTrial],
     randomize_order: true,
     repetitions: 8
 };
@@ -152,12 +152,12 @@ timeline.push(singleDotDurationBlock);
 // Define timeline variables for trials with two images
 // An array of hash tables with a key for the two image parameters, "stimulusOne" and "stimulusTwo"
 // The array has five elements therefore this will define a block of five trials
-let timelineVariablesDoubleImage = [{ stimulusOne: "./img/test_faces/female1.jpg", stimulusTwo: "./img/test_faces/male1.jpg" }, { stimulusOne: "./img/test_faces/female2.jpg", stimulusTwo: "./img/test_faces/male2.jpg" }, { stimulusOne: "./img/test_faces/female3.jpg", stimulusTwo: "./img/test_faces/male3.jpg" }, { stimulusOne: "./img/test_faces/female4.jpg", stimulusTwo: "./img/test_faces/male4.jpg" }, { stimulusOne: "./img/test_faces/female5.jpg", stimulusTwo: "./img/test_faces/male5.jpg" }];
+let timelineVariablesDoubleImage = [{ stimulusOne: "./img/birds/bird1.jpeg", stimulusTwo: "./img/birds/bird2.jpeg" }, { stimulusOne: "./img/birds/bird3.jpeg", stimulusTwo: "./img/birds/bird4.jpeg" }, { stimulusOne: "./img/birds/bird5.jpeg", stimulusTwo: "./img/birds/bird6.jpeg" }, { stimulusOne: "./img/birds/bird7.jpeg", stimulusTwo: "./img/birds/bird8.jpeg" }, { stimulusOne: "./img/birds/bird9.jpeg", stimulusTwo: "./img/birds/bird10.jpeg" }];
 
 // Text between fixation dot and double image gaze trials
 timeline.push({
     type: 'html-keyboard-response',
-    stimulus: "SINGLE-DOT-GAZE trials are completed. <p>The next block will contain 5 DOUBLE-IMAGE-GAZE trials. This is the only trial types in which a gaze response is necessary to complete the trial.</p><p>To finish a trial, please gaze at one of the stimuli for 1000ms straight.</p>  Press [space] to continue",
+    stimulus: "SINGLE-DOT-DURATION trials are completed. <p>The next block will contain 5 DOUBLE-IMAGE-GAZE trials. This is the only trial types in which a gaze response is necessary to complete the trial.</p><p>To finish a trial, please gaze at one of the stimuli for 1000ms straight.</p>  Press [space] to continue",
     choices: ["space"]
 });
 
@@ -206,7 +206,7 @@ timeline.push({
 // Define timeline variables for trials with one image
 // An array of hash tables with a key for the one image parameters, "stimulus"
 // The array has five elements therefore this will define a block of five trials
-let timelineVariablesSingleImage = [{ stimulus: "./img/test_faces/female1.jpg" }, { stimulus: "./img/test_faces/female2.jpg" }, { stimulus: "./img/test_faces/female3.jpg" }, { stimulus: "./img/test_faces/female4.jpg" }, { stimulus: "./img/test_faces/female5.jpg" }];
+let timelineVariablesSingleImage = [{ stimulus: "./img/birds/bird2.jpeg" }, { stimulus: "./img/birds/bird3.jpeg" }, { stimulus: "./img/birds/bird4.jpeg" }, { stimulus: "./img/birds/bird5.jpeg" }, { stimulus: "./img/birds/bird6.jpeg" }];
 
 // Add a block of SINGLE-IMAGE-KEY to the timeline
 timeline.push({
@@ -235,7 +235,7 @@ timeline.push({
 // Pressing spacebar will end the experiment
 timeline.push({
     type: 'html-keyboard-response',
-    stimulus: "All trials types are now completed. Press [space] to finish the experiment.",
+    stimulus: "All trials types are now completed. Please visit the Gazer documentation at <a href='https://amyvanwell.github.io/gazerCode/'>amyvanwell.github.io/gazerCode/</a> for an example of the data output produced by Gazer.</p><p>Thank you for trying the demo, you may now exit the page.</p><p>If you have any questions, pleas email the author at amyvanwell@uvic.ca</p>",
     choices: ["space"]
 });
 
