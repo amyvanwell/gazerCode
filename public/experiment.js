@@ -3,7 +3,7 @@
 // GAZER ONLY WORKS IN THE CHROME BROWSER
 
 // Initiate global variables
-let chromeAgent = false;
+let chromeBrowser = false;
 
 // These are define in external libraries, included in the experiment.html
 var webgazer;
@@ -14,14 +14,21 @@ var disablePredictionPoints;
 let userAgentString = navigator.userAgent;
 
 // Detect Chrome 
-chromeAgent = userAgentString.indexOf("Chrome") > -1;
+chromeBrowser = userAgentString.indexOf("Chrome") > -1;
 
-// Once the page is loaded, initiate Webgazer
-document.addEventListener("DOMContentLoaded", () => {
-    if (webgazer) {
-        webgazer.params.showVideoPreview = true;
-        webgazer.begin();
-    }
+// Initiate Webgazer
+webgazer.params.showVideoPreview = true;
+webgazer.begin(() => {
+    // OnFail callback provided by Webgazer if the video camera is not accessible
+    // Switch to an alternative timeline and abort the current experiment
+
+    jsPsych.init({
+        timeline: [{
+            type: "html-keyboard-response",
+            stimulus: "<div id='main' style='max-width:600;'>Sorry, your setup is insufficient for the current experiment. Either we were unable to acess your webcam, or you are not using the Chrome browser. Please restart using Chrome. Thanks!</div>",
+            choices: ["space"]
+        }]
+    });
 });
 
 // JSPSYCH CODE BEGINS HERE
@@ -231,15 +238,8 @@ timeline.push({
     choices: ["space"]
 });
 
-// Initiate the text to display if Chrome is not used
-const noChrome = {
-    type: "html-keyboard-response",
-    stimulus: "<div id='main' style='max-width:600;'>Sorry, this experiment does not work without the Chrome browser. Please restart using Chrome. Thanks!</div>",
-    choices: ["space"]
-};
-
 // Execute the jsPsych experiment with the events defined in the timeline array if chrome is detected
-if (chromeAgent == true) {
+if (chromeBrowser) {
     jsPsych.init({
         timeline: timeline,
         preload_images: images,
@@ -249,6 +249,10 @@ if (chromeAgent == true) {
     });
 } else {
     jsPsych.init({
-        timeline: [noChrome]
+        timeline: [{
+            type: "html-keyboard-response",
+            stimulus: "<div id='main' style='max-width:600;'>Sorry, your setup is insufficient for the current experiment. Either we were unable to acess your webcam, or you are not using the Chrome browser. Please restart using Chrome. Thanks!</div>",
+            choices: ["space"]
+        }]
     });
 }
