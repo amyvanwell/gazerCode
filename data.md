@@ -21,9 +21,9 @@ Sample output for part of trial using Gazer:
 | 574           | 731      | 351   |
 | 656           | 939 | 329  |
 
-The output of all trials using Gazer plugins include data with the above information as an array of hash tables. Each element in the array is one of the Gazer points (in chronological order) including values for time, x-coord, and y-coord. For example, a Single-Dot-Duration trial lasting 2000ms will generate an array with approximately 35 points.
+The output of all trials using Gazer plugins include data with the above information as an array of hash tables. Each element in the array is one of the Gazer points (in chronological order) including values for time, x-coord, and y-coord. For example, a Single-Dot-Duration trial lasting 2000ms will generate an array with approximately 35 gaze prediction points.
 
-The above sample was formatted originally as :
+The raw formatting for the above sample was originally as follows:
 
 ```js
 [ 
@@ -32,17 +32,15 @@ The above sample was formatted originally as :
 {time: 574, x: 731, y: 351},
 {time: 656, x: 939, y: 329}
 ]
-
-
 ```
 
 ## Analysis
 
-Code is currently being developed for release that will allow easy analysis of Gazer data for fixations and saccades. The analysis will be written in Python.
+Code is currently being developed for open release that will allow easy analysis of Gazer data for fixations and saccades. The analysis will be written in Python.
 
 ### Sample Analysis
 
-Data from 42 participants participating in multiple blocks of the exogeneous fixation task generates the following data:
+Data from 42 participants participating in multiple blocks of the single dot fixation task generates the following data:
 
 ![raw_group](https://user-images.githubusercontent.com/45886402/134231200-256b5d30-2c2b-482f-b3b8-29ed0781700b.jpeg)
 
