@@ -1,0 +1,19 @@
+{
+    "name": "dataserver",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "experiment": "ws"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "local-web-server": "^4.2.1",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {},
+    "browserslist": [
+        "last 10 chrome versions"
+    ]
+}
