@@ -4,29 +4,15 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "experiment": "PORT=8000 node server.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "babel src -d public",
-        "dev": "find src -type f -print | entr npm run build",
-        "start": "node server.js"
+        "experiment": "ws"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.17.1",
         "local-web-server": "^4.2.1",
-        "lodash": "^4.17.21",
-        "mongodb": "^3.6.3"
+        "lodash": "^4.17.21"
     },
-    "devDependencies": {
-        "@babel/cli": "^7.13.0",
-        "@babel/core": "^7.13.8",
-        "@babel/eslint-parser": "^7.13.8",
-        "@babel/preset-env": "^7.13.8",
-        "babel-cli": "^6.26.0",
-        "eslint": "^7.21.0"
-    },
+    "devDependencies": {},
     "browserslist": [
         "last 10 chrome versions"
     ]
