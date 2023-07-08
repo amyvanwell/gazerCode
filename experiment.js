@@ -6,6 +6,7 @@
 let chromeBrowser = false;
 let TEST = true;
 let PAVLOVIA = true;
+console.log("Here")
 
 // These are define in external libraries, included in the experiment.html
 var webgazer;
@@ -56,7 +57,7 @@ var pavlovia_init = {
         pavloviaInfo = info;
     }
 };
-if(PAVLOVIA)timeline.push(pavlovia_init);
+//if(PAVLOVIA){timeline.push(pavlovia_init)};
 
 //      CHECK FOR SCREEN REQUIREMENTS
 timeline.push({
@@ -178,7 +179,8 @@ const singleImageDurationTrial = {
 // Alternatively, you could include a list of keys as ["space", "q"] or one key as ["space"]
 const singleImageKeyTrial = {
     type: singleImageKey,
-    stimulus: jsPsych.timelineVariable("stimulus")
+    stimulus: jsPsych.timelineVariable("stimulus"),
+    choices: ["f", "j"]
 };
 
 //      BEGIN ADDING BLOCKS OF TRIALS TO THE TIMELINE
@@ -317,7 +319,7 @@ var pavlovia_finish = {
     }
 };
 
-if(PAVLOVIA)timeline.push(pavlovia_finish);
+//if(PAVLOVIA){timeline.push(pavlovia_finish)};
 
 //      EXECUTE TIMELINE
 console.log(timeline);
