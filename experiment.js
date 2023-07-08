@@ -178,8 +178,7 @@ const singleImageDurationTrial = {
 // Alternatively, you could include a list of keys as ["space", "q"] or one key as ["space"]
 const singleImageKeyTrial = {
     type: singleImageKey,
-    stimulus: jsPsych.timelineVariable("stimulus"),
-    endKeys: ["f", "j"]
+    stimulus: jsPsych.timelineVariable("stimulus")
 };
 
 //      BEGIN ADDING BLOCKS OF TRIALS TO THE TIMELINE
@@ -253,7 +252,7 @@ timeline.push({
 // Text between double image duration and single image key trials
 timeline.push({
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "DOUBLE-VISION-DURATION trials are completed. <p>The next set of trials will demonstrate the <b>SINGLE</b>-IMAGE-KEY trial type.</p><p>To end a trial, you will need to provide a key response. Use the [f] or [j] keys to end a trial.</p> <p>To proceed to the trials, press the [space] key.</p>"
+    stimulus: "DOUBLE-VISION-DURATION trials are completed. <p>The next set of trials will demonstrate the <b>SINGLE</b>-IMAGE-KEY trial type.</p><p>To end a trial, you will need to provide a key response. Use the [spacebar] key to end a trial.</p> <p>To proceed to the trials, press the [space] key.</p>"
 });
 
 // Define timeline variables for trials with one image
@@ -293,7 +292,8 @@ timeline.push({
 // Pressing spacebar will end the experiment
 timeline.push({
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "All trials types are now completed. Please visit the Gazer documentation at <a href='https://amyvanwell.github.io/gazerCode/'>amyvanwell.github.io/gazerCode/</a> for an example of the data output produced by Gazer.</p><p>Thank you for trying the demo, you may now exit the page.</p><p>If you have any questions, please email the author at amyvanwell@uvic.ca</p>"
+    stimulus: "All trials types are now completed. Please visit the Gazer documentation at <a href='https://amyvanwell.github.io/gazerCode/'>amyvanwell.github.io/gazerCode/</a> for an example of the data output produced by Gazer.</p><p>Thank you for trying the demo, you may now exit the page.</p><p>If you have any questions, please email the author at amyvanwell@uvic.ca</p>",
+    on_start: ()=>{showVideoShowMouse(true)}
 });
 
 //      SAVE DATA TO PAVLOVIA
