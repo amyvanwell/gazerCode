@@ -5,7 +5,7 @@
 // Initiate global variables
 let chromeBrowser = false;
 let TEST = true;
-let PAVLOVIA = false;
+let PAVLOVIA = true;
 
 // These are define in external libraries, included in the experiment.html
 var webgazer;
