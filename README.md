@@ -32,28 +32,6 @@ npm run experiment
 
 2. In the browser, navigate to this URL:
    [Localhost](http://localhost:8000/)
-3. You may need to select the public folder from there. Once you've done that, you'll be at the index.html file and at the start of the program :)
+3. Once you've done that, you'll be at the experiment.html file and at the start of the program :)
 
-# How To Update Your Experiment
 
-This folder has two trees; the source tree (the src file) and the public tree (the public file). The code run by your participants is in the public folder. You will work in the src folder (i.e. you will edit all of your js files in the src folder) and then use a program to transfer these changes to the public folder.
-
-1. When you make any changes, run the following command in terminal:
-
-```
-npm run build
-```
-
-After you've run this command, you will have rebuilt the public tree including any new changes, and these changes will be reflected in the local server.
-
-# How To Code in Development Mode (Auto-Updating As You Go)
-
-The benefit of having a separate source and public tree is the ability to check your work during the building of the public tree. The Babel system that does the building looks for typos and other types of logical and syntactical errors along the way. The system will alert you if it finds these erorrs and "fail" to build. Essentially, the program finds problems for you and points out exactly what and where they are.
-
-While you are editing your code in the source folder, run the following command:
-
-```
-npm run dev
-```
-
-This command will start a program to re-run the build command every time a file in the source tree is re-saved. In other words, every time you save your work in the source tree (any file!), this program will try to build the public tree again and will alert you of any potential errors. Use this while you work to both save time and generate better code!
