@@ -43,14 +43,14 @@ function finishdoubleImageKey(info) {
 }
 
 /**
- * @function checkCurrentPointdoubleImage
+ * @function " checkCurrentPointDoubleImageKey
  * 
  * Collects the current prediction from webgazer and updates the list of points.
- * Once the collection and update are complete, wait 10ms then rerun checkCurrentPointdoubleImage.
+ * Once the collection and update are complete, wait 10ms then rerun " checkCurrentPointDoubleImageKey.
  * 
  */
 
-async function checkCurrentPointdoubleImage(duration) {
+async function checkCurrentPointDoubleImageKey(duration) {
     // Collect a new prediction point if trial is not complete
     if (!doubleImageKeyComplete) {
         // Record the time that the newest point is calculated
@@ -87,7 +87,7 @@ async function checkCurrentPointdoubleImage(duration) {
         // Check if trial is complete (current time has reached the duration from the trial parameters provided)
         if (startTime < duration) {
             // Set a timeout to gather the next point
-            setTimeout(() => checkCurrentPointdoubleImage(duration), 10);
+            setTimeout(() => checkCurrentPointDoubleImageKey(duration), 10);
         } else {
             // Finish the trial without a key response
             doubleImageKeyComplete = true;
@@ -110,7 +110,7 @@ async function checkCurrentPointdoubleImage(duration) {
  * @param {integer} duration      - Time in ms to display two images, default is 5000 ms.
  * @param {string}  stimulusOne  - Path to stimulus image displayed on left.
  * @param {string}  stimulusTwo - Path to stimulus image displayed on right.
- * @param {string}  endKeys       - Key name (ex. 'space') to allow as response. Can be a single string or a list for multiple possible responses.
+ * @param {string}  endKeys       - Key name (ex. ' ') to allow as response. Can be a single string or a list for multiple possible responses.
  * @param {integer} paddingVal    - Amount of pixels to offset the stimuli from center, defaults to 30px.
  * 
  */
@@ -208,7 +208,7 @@ var doubleImageKey = (function (jspsych){
 
         // Record current time as start of trial and initiate collection and analysis of webgazer predictions
         doubleImageKeyStart = Date.now();
-        checkCurrentPointdoubleImage(duration);
+        checkCurrentPointDoubleImageKey(duration);
     }
     }
     doubleImageKeyPlugin.info = info;

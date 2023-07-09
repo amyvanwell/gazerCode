@@ -4,7 +4,7 @@
 
 // Initiate global variables
 let chromeBrowser = false;
-let TEST = false;
+let TEST = true;
 let PAVLOVIA = true;
 
 // These are define in external libraries, included in the experiment.html
@@ -24,7 +24,7 @@ webgazer.begin(() => {
     jsPsych.run([{
             type: jsPsychHtmlKeyboardResponse,
             stimulus: "<div id='main' style='max-width:600;'>Sorry, your setup is insufficient for the current experiment. Either we were unable to acess your webcam, or you are not using the Chrome browser. Please restart using Chrome. Thanks!</div>",
-            choices: ["space"]
+            choices: [" "]
         }]
     );
 });
@@ -175,7 +175,7 @@ const singleImageDurationTrial = {
 // Initate the SINGLE-IMAGE-KEY trial with one image
 // Displays one image and ends with a key response
 // Key response set to [spacebar]
-// Alternatively, you could include a list of keys as ["space", "q"] or one key as ["space"]
+// Alternatively, you could include a list of keys as [" ", "q"] or one key as [" "]
 const singleImageKeyTrial = {
     type: singleImageKey,
     stimulus: jsPsych.timelineVariable("stimulus"),

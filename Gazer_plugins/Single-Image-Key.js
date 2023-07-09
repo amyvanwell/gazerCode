@@ -114,7 +114,7 @@ async function checkCurrentPointSingleImageKey(duration) {
  * @param {integer} duration  - Time in ms to display center image.
  * @param {string}  stimulus  - Path to stimulus image.
  * @param {boolean} upright   - Orientation of the stimulus image.
- * @param {string}  endKeys   - Key name (ex. 'space') to allow as response.
+ * @param {string}  endKeys   - Key name (ex. ' ') to allow as response.
  * 
  */
 
@@ -140,7 +140,7 @@ var singleImageKey = (function (jspsych){
             endKeys: {
                 type: jspsych.ParameterType.HTML_STRING,
                 description: 'The keys used to end the trial, can be a single string or a list. Defaults to "space"',
-                default: 'space'
+                default: ' '
             }
         }
     }
