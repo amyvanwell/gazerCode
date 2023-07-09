@@ -2,7 +2,7 @@
 
 # Documentation
 
-For full documentation of Gazer past download and install, please consult the [Gazer Docs](https://amyvanwell.github.io/gazerCode/).
+For full documentation of Gazer past download and install, please consult the [Gazer Docs](https://amyvanwell.github.io/gazerCode/). The code is hosted on Pavlovia for demonstration purposes, [try Demo]( https://run.pavlovia.org/amyvanwell/pavlovia_gazersite).
 
 # Demo
 
