@@ -2,11 +2,15 @@
 
 # Documentation
 
-For full documentation of Gazer past download and install, please consult the [Gazer Docs](https://amyvanwell.github.io/gazerCode/). The code is hosted on Pavlovia for demonstration purposes, [try Demo]( https://run.pavlovia.org/amyvanwell/pavlovia_gazersite).
+For full documentation of Gazer past download and install, please consult the [Gazer Docs](https://amyvanwell.github.io/gazerCode/).
 
 # Demo
 
-To see the demo working online, see the deployment at the following [link](https://gazer-demo.herokuapp.com/).
+To see the demo working online for the current code, see the deployment at the following [link]([https://gazer-demo.herokuapp.com/](https://run.pavlovia.org/amyvanwell/pavlovia_gazersite))).
+
+# Active Vision Demo
+
+To see the demo online for a joint attention task, as demo'ed at VSS 2023, see the following [link](https://run.pavlovia.org/amyvanwell/pavlovia_activevision).
 
 # How To Install
 
