@@ -57,7 +57,7 @@ var pavlovia_init = {
         pavloviaInfo = info;
     }
 };
-//if(PAVLOVIA){timeline.push(pavlovia_init)};
+if(PAVLOVIA){timeline.push(pavlovia_init)};
 
 //      CHECK FOR SCREEN REQUIREMENTS
 timeline.push({
@@ -319,7 +319,7 @@ var pavlovia_finish = {
     }
 };
 
-//if(PAVLOVIA){timeline.push(pavlovia_finish)};
+if(PAVLOVIA){timeline.push(pavlovia_finish)};
 
 //      EXECUTE TIMELINE
 console.log(timeline);
