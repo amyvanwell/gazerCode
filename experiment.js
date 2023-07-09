@@ -1,10 +1,11 @@
 // PRE-JSPSYCH CODE
 // INITIATE GLOBAL VARIABLES AND COLLECT INFORMATION RE: PARTICIPANT'S BROWSER
 // GAZER ONLY WORKS IN THE CHROME BROWSER
+// INCLUDES PLUGINS TO WORK WITH PAVLOVIA
 
 // Initiate global variables
 let chromeBrowser = false;
-let TEST = true;
+let TEST = false;
 let PAVLOVIA = true;
 
 // These are define in external libraries, included in the experiment.html
