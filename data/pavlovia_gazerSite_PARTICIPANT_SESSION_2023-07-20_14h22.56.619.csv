@@ -1,0 +1,10 @@
+"trial_type","trial_index","time_elapsed","internal_node_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","success","timeout","failed_images","failed_audio","failed_video","rt","stimulus","response","calibrationAccuracy"
+"pavlovia","0","3074","0.0-0.0","","","","","","","","","","","","","","","","","","","",""
+"browser-check","1","4081","0.0-1.0","1440","718","true","chrome","114.0.0","false","Mac OS","true","59.99","true","true","","","","","","","","",""
+"preload","2","4953","0.0-2.0","","","","","","","","","","","","true","false","[]","[]","[]","","","",""
+"html-keyboard-response","3","5706","0.0-3.0","","","","","","","","","","","","","","","","","752","<p>Welcome to the Gazer demo experiment.</p>
+    <p>The purpose of this demo is to provide working examples for all the available Gazer plugins for jsPsych.</p>
+    <p>For documentation of this system, please visit <a href='https://amyvanwell.github.io/gazerCode/'>amyvanwell.github.io/gazerCode/</a>.</p> 
+    <p>Press any key to proceed to the first part of the demonstration, the Gazer calibration.</p>"," ",""
+"calibrate-quadrants-simple","4","31460","0.0-4.0","","","","","","","","","","","","","","","","","","","","72"
+"html-keyboard-response","5","32269","0.0-5.0","","","","","","","","","","","","","","","","","807","<p>Thank you for calibrating, you will now proceed to the trials.</p><p> There are a total of 5 blocks of trials, each of a different type. <br>The first will be a block of 8 SINGLE-DOT-DURATION trials.</p><p>Your task is to fixate on the center cross, and then gaze at the red dot when it appears until the end of the trial.</p><p>In each trial, we will wait to present the red dot until we record your gaze has been on the center cross for 250ms consecutively.</p><p> Press [space] to continue to proceed to the first trial.</p>"," ",""
