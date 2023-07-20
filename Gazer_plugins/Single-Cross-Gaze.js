@@ -38,7 +38,7 @@ async function analyzeCurrentPoint() {
     if (!singleCrossGazeComplete && !skippedTrialFixation) {
 
         // Record current time
-        let start_time = Date.now();
+        let startTime = Date.now();
         // Intialize x and y so they are accessible throughout this block
         let x = 0;
         let y = 0;
@@ -68,7 +68,7 @@ async function analyzeCurrentPoint() {
         // Record the end of the current point calculation
         let end_time = Date.now()
             // Save the current gaze point including timing information
-        singleCrossData.push({ start_time, x, y, analysisTime: end_time - start_time });
+        singleCrossData.push({ startTime, x, y, analysisTime: end_time - start_time });
 
         // End the trial if participants have been gazing at the center cross for the provided duration
         if (currGazeTime >= duration && currObject == "cross") {
@@ -251,6 +251,7 @@ var singleCrossGaze = (function (jspsych){
         singleCrossGazeComplete = false;
         checkForSkipFixation = "";
         currGazeTime = 0;
+        singleCrossData = [];
 
         // Calculate the center of the screen
         centerX = window.innerWidth / 2;
