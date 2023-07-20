@@ -68,7 +68,7 @@ async function analyzeCurrentPoint() {
         // Record the end of the current point calculation
         let end_time = Date.now()
             // Save the current gaze point including timing information
-        singleCrossData.push({ startTime, x, y, analysisTime: end_time - start_time });
+        singleCrossData.push({ startTime, x, y, analysisTime: end_time - startTime });
 
         // End the trial if participants have been gazing at the center cross for the provided duration
         if (currGazeTime >= duration && currObject == "cross") {
